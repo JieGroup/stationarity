@@ -20,5 +20,5 @@ To see the available function to use, type
 
 ls("package:stationarity")
 
-A quick guide of package can be found [here](https://github.com/JieGroup/bc/blob/master/vignettes/introduction.pdf) 
+A quick guide of package can be found [here](https://github.com/JieGroup/stationarity/blob/master/vignettes/user-guide.pdf) 
 
