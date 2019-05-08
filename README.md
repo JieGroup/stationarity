@@ -1,5 +1,5 @@
 # The 'stationarity' R package
-Stationarity tests based on the Multitaper spectrum method
+Our package contains a parametric test, Priestley-Subba Rao test (PSR test), and a non-parametric test, Rank-based Stationarity test (RS test). Both tests are based on the multitaper method. The PSR test resembles the stationarity function in fractal: A Fractal Time Series Modeling and Analysis Package by William Constantine and Donald Percival. However, in our paper, we provide a rigorous analysis for the bias/variance/resolution tradeoff for the multitaper method under the evolutionary spectra framework by Priestley. Our non-parametric test is complementary to the PSR test, as the RS test is more robust to the underlying data-generating mechanism. 
 
 ## Getting Started
 
