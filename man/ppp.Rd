@@ -21,7 +21,7 @@ Data used in the experimental study in reference
 }
 \examples{
 data(ppp)
-isStationary <- stationaryTest(ppp$uk)
+isStationary <- stationarityTest(ppp$uk)
 }
 \references{
 Y. Xiang, J. Ding, V. Tarokh, “Evolutionary Spectra Based on the 

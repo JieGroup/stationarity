@@ -1,10 +1,10 @@
-Package: stationary
-Title: Stationarity Test for One Dimensional Time Series
+Package: stationarity
+Title: Test the Stationarity of Time Series
 Version: 0.0.1
 Authors@R: c(
     person("Yu", "Xiang", email = "yu.xiang@utah.edu", role = c("aut")),
     person("Jie", "Ding", email = "dingj@umn.edu", role = c("aut","cre")))
-Description: This package uses the multitaper method to estimate spectrum and construct hypothesis tests for the null hypothesis that a given time series is stationary. The test is based on either two-way ANOVA or Rank-based nonparametric test.
+Description: It uses the multitaper method to estimate spectrum and construct hypothesis tests for the null hypothesis that a given time series is stationary. The test is based on either two-way ANOVA or Rank-based nonparametric test.
 Depends: R (>= 3.5.0)
 License: GPL-3
 Encoding: UTF-8

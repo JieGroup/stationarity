@@ -25,5 +25,5 @@
 #'
 #' @examples
 #' data(ppp)
-#' isStationary <- stationaryTest(ppp$uk)
+#' isStationary <- stationarityTest(ppp$uk)
 "ppp"

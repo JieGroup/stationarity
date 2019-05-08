@@ -25,8 +25,8 @@ a given one dimensional is stationary. The test can be either two-way ANOVA or R
 data(ppp)
 dat <- ppp$japan
 plot(dat)
-stationaryTest(X=dat, alpha=0.01, method='parametric')
+stationarityTest(X=dat, alpha=0.01, method='parametric')
 plot(diff(log(dat)))
-stationaryTest(X=diff(log(dat)), alpha=0.01, method='parametric')
+stationarityTest(X=diff(log(dat)), alpha=0.01, method='parametric')
 
 }

@@ -1,5 +1,5 @@
 ---
-title: "Quick Guide to the ‘stationary' Package"
+title: "Quick Guide to the stationarity' Package"
 author: "Yu Xiang, Jie Ding"
 date: "February 12, 2019"
 output: 
@@ -9,7 +9,7 @@ output:
     # highlight: zenburn
     
 vignette: >
-  %\VignetteIndexEntry{User guide to the stationary R package}
+  %\VignetteIndexEntry{User guide to the stationarity R package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
   
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
  
-This vignette serves as a quick guide on how to use the 'stationary' R package to perform stationarity test based on multitaper method. 
+This vignette serves as a quick guide on how to use the 'stationarity' R package to perform stationarity test based on multitaper method. 
 The reference to this package is [here](https://ieeexplore.ieee.org/document/8598905)
 
  
@@ -36,7 +36,7 @@ The R package includes `ppp' dataset. It is an R dataframe containing exchange r
 As elaborated in the reference paper, the data could be used for understanding purchasing power parity (PPP) hypothesis
 
 ```{r,eval = FALSE}
-library(stationary)
+library(stationarity)
 data(ppp)
 series <- ppp$japan
 isStationary <- stationarityTest(series)
