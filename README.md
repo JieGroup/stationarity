@@ -21,6 +21,6 @@ ls("package:stationarity")
 
 A quick guide of package can be found [here](https://github.com/JieGroup/stationarity/blob/master/vignettes/user-guide.pdf) 
 
-## The reference paper is:  
+## Reference Paper  
 
-Y. Xiang, J. Ding, V. Tarokh, "Evolutionary Spectra Based on the Multitaper Method with Application to Stationarity Test,"  IEEE Transactions on Signal Processing, 2018.
+Y. Xiang, J. Ding, V. Tarokh, "Evolutionary Spectra Based on the Multitaper Method with Application to Stationarity Test,"  IEEE Transactions on Signal Processing, 2018. [link](https://ieeexplore.ieee.org/document/8598905) 
