@@ -1,0 +1,64 @@
+---
+title: "Quick Guide to the ‘stationary' Package"
+author: "Yu Xiang, Jie Ding"
+date: "February 12, 2019"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    # theme: united
+    # highlight: zenburn
+    
+vignette: >
+  %\VignetteIndexEntry{User guide to the stationary R package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+  
+params:
+  filename: "filename.csv"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+ 
+This vignette serves as a quick guide on how to use the 'stationary' R package to perform stationarity test based on multitaper method. 
+The reference to this package is [here](https://ieeexplore.ieee.org/document/8598905)
+
+ 
+
+## Stationary Test
+
+Suppose that we are interested in testing whether a given time series is stationary, with the null hypothesis that the series is stationary. The following function returns a boolean result, where `False' indicates a rejection of the null hypothesis (under a default 0.05 significance level). 
+
+The R package includes `ppp' dataset. It is an R dataframe containing exchange rates of Canada, China, Germany, Japan, and UK, with respect to US over the period of January 1970 to December 2017.
+As elaborated in the reference paper, the data could be used for understanding purchasing power parity (PPP) hypothesis
+
+```{r,eval = FALSE}
+library(stationary)
+data(ppp)
+series <- ppp$japan
+isStationary <- stationarityTest(series)
+series <- diff(log(ppp$japan))
+isStationary <- stationarityTest(series)
+```
+
+In the above use, the default significance level is set to be 0.05, and the default method is 'parametric' which corresponds to the modified Priestley and Subba Rao (PSR) test in the reference paper. The 'parametric' method is based on an almagamation of multitaper method and two-way ANOVA test. 
+
+Alternatively, user may change the default arguments, e.g. with the following codes.
+The method `nonparametric' is based on an almagamation of multitaper method and a rank-based nonparametric test that was also elaborated in the reference paper. The significance level alpha controls the Type I error.
+```{r,eval = FALSE}
+isStationary <- stationarityTest(series, alpha=0.01, method='nonparametric')
+```
+
+
+
+
+<!--
+You can also embed plots, for example:
+
+```{r pressure, echo=TRUE}
+plot(pressure)
+```
+
