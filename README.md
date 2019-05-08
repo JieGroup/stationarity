@@ -1,6 +1,9 @@
 # The 'stationarity' R package
 Stationarity tests based on the Multitaper spectrum method
 
+This package is part of the following reference:
+
+Y. Xiang, J. Ding, V. Tarokh, ?Evolutionary Spectra Based on the Multitaper Method with Application to Stationarity Test,?  IEEE Transactions on Signal Processing, 2018.
 
 ## Getting Started
 
