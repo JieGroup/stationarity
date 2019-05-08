@@ -1,7 +1,7 @@
 ---
 title: "Quick Guide to the stationarity' Package"
 author: "Yu Xiang, Jie Ding"
-date: "February 12, 2019"
+date: "May 1, 2019"
 output: 
   rmarkdown::html_vignette:
     toc: true
@@ -35,16 +35,31 @@ Suppose that we are interested in testing whether a given time series is station
 The R package includes `ppp' dataset. It is an R dataframe containing exchange rates of Canada, China, Germany, Japan, and UK, with respect to US over the period of January 1970 to December 2017.
 As elaborated in the reference paper, the data could be used for understanding purchasing power parity (PPP) hypothesis
 
-```{r,eval = FALSE}
+```{r,fig.width=5, fig.height=3,eval = TRUE}
 library(stationarity)
+# Load exchange rates data 
 data(ppp)
 series <- ppp$japan
+# Visualize the series
+plot(series, type="l", col="blue")
+title(main="Exchange rates of Japan", col.main="black", font.main=4)
+# Perform test, with the null hypothesis being stationary
 isStationary <- stationarityTest(series)
-series <- diff(log(ppp$japan))
-isStationary <- stationarityTest(series)
+# isStationary=FALSE indicates a rejection of the null hypothesis that the series is stationary  
+print(isStationary)
 ```
 
-In the above use, the default significance level is set to be 0.05, and the default method is 'parametric' which corresponds to the modified Priestley and Subba Rao (PSR) test in the reference paper. The 'parametric' method is based on an almagamation of multitaper method and two-way ANOVA test. 
+```{r,fig.width=5, fig.height=3,eval = TRUE}
+# Suppose we difference the log of the original data
+series <- diff(log(ppp$japan))
+plot(series, type="l", col="red")
+title(main="Exchange rates of Japan", col.main="black", font.main=4)
+isStationary <- stationarityTest(series)
+# isStationary=True indicates a failure of rejection of the null hypothesis that the series is stationary 
+print(isStationary)
+```
+
+In the above uses, the default significance level is set to be 0.05, and the default method is 'parametric' which corresponds to the modified Priestley and Subba Rao (PSR) test in the reference paper. The 'parametric' method is based on an almagamation of multitaper method and two-way ANOVA test. 
 
 Alternatively, user may change the default arguments, e.g. with the following codes.
 The method `nonparametric' is based on an almagamation of multitaper method and a rank-based nonparametric test that was also elaborated in the reference paper. The significance level alpha controls the Type I error.
