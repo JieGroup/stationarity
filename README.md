@@ -27,4 +27,4 @@ The PSR test resembles the stationarity function in "fractal: A Fractal Time Ser
 
 ## Reference Paper 
 
-Y. Xiang, J. Ding, V. Tarokh, "Evolutionary Spectra Based on the Multitaper Method with Application to Stationarity Test,"  IEEE Transactions on Signal Processing, 2018. [link](https://ieeexplore.ieee.org/document/8598905) 
+Y. Xiang, J. Ding, V. Tarokh, "Evolutionary Spectra Based on the Multitaper Method with Application to Stationarity Test,"  IEEE Transactions on Signal Processing, 2018. [pdf](https://arxiv.org/pdf/1802.09053.pdf) 
